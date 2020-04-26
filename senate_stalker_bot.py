@@ -62,7 +62,7 @@ while True:
         last_years_carbon_level = df.loc[(len(df)- 366), 1]
 
         for i in range(len(senators_batch_2)):
-            tweet = str("Hey "+senators_batch_1[i]+"! Did you know that today, the level of CO2 in the atmosphere is "+todays_carbon_level+" parts per million? One year ago, it was "+last_years_carbon_level+" parts per million. Super cool, amirite? And it's thanks to your inaction! Hope you sleep well tonight! Source: https://carbon.datahub.io/#")
+            tweet = str("Hey "+senators_batch_1[i]+"! Here’s a fun reminder for you: today’s level of atmospheric CO2 is "+todays_carbon_level+" parts per million? A year ago, it was "+last_years_carbon_level+" parts per million. Wow, sure seems like something should be done about that! Oh, well. Have a superb week! Source: https://carbon.datahub.io/#")
             api.update_status(status = (tweet))
 
     # this function is the same as calculate_and_tweet_1,
@@ -103,16 +103,16 @@ while True:
 
     # checking the day and time, then tweeting appropriate senators (or taking a nop)
     if todays_date.weekday() == 5 and todays_date.hour == 10:   # if it's saturday
-        calculate_and_tweet_1(df, todays_date, senators_batch_1)
+        calculate_and_tweet_1(df, senators_batch_1)
         go_to_sleep()
     elif todays_date.weekday() == 6 and todays_date.hour == 10: # if it's sunday
-        calculate_and_tweet_2(df, todays_date, senators_batch_2)
+        calculate_and_tweet_2(df, senators_batch_2)
         go_to_sleep()
     elif todays_date.weekday() == 0 and todays_date.hour == 10: # if it's monday
-        calculate_and_tweet_3(df, todays_date, senators_batch_3)
+        calculate_and_tweet_3(df, senators_batch_3)
         go_to_sleep()
     elif todays_date.weekday() == 1 and todays_date.hour == 10: # if it's tuesdayyy
-        calculate_and_tweet_4(df, todays_date, senators_batch_4)
+        calculate_and_tweet_4(df, senators_batch_4)
         go_to_sleep()
     elif todays_date == 2:
         go_to_sleep()
