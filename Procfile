@@ -1,1 +1,1 @@
-worker: senate_stalker_bot.py
+worker: python senate_stalker_bot.py
