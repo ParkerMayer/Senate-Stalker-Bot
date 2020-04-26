@@ -51,7 +51,7 @@ while True:
 
         # tweeting each of the senatorsTM
         for i in range(len(senators_batch_1)):
-            tweet = str("Hey "+senators_batch_1[i]+"! Did you know that today, the level of CO2 in the atmosphere is "+todays_carbon_level+" parts per million? One year ago, it was "+last_years_carbon_level+" parts per million. Super cool, amirite? And it's thanks to your inaction! Hope you sleep well tonight! Source: https://carbon.datahub.io/#")
+            tweet = str("Hey "+senators_batch_1[i]+"! Did you know that today, the level of CO2 in the atmosphere is "+todays_carbon_level+" parts per million? One year ago, it was "+last_years_carbon_level+" parts per million. Super cool, amirite? And it's thanks to your inaction! Source: https://carbon.datahub.io/# "+todays_date)
             api.update_status(status = (tweet))
             time.sleep(60)
 
@@ -62,7 +62,7 @@ while True:
         last_years_carbon_level = df.loc[(len(df)- 366), 1]
 
         for i in range(len(senators_batch_2)):
-            tweet = str("Hey "+senators_batch_1[i]+"! Here’s a fun reminder for you: today’s level of atmospheric CO2 is "+todays_carbon_level+" parts per million? A year ago, it was "+last_years_carbon_level+" parts per million. Wow, sure seems like something should be done about that! Oh, well. Have a superb week! Source: https://carbon.datahub.io/#")
+            tweet = str("Hey "+senators_batch_1[i]+"! Here’s a fun reminder for you: today’s level of atmospheric CO2 is "+todays_carbon_level+" parts per million? A year ago, it was "+last_years_carbon_level+" parts per million. Wow, sure seems like something should be done about that! Source: https://carbon.datahub.io/# "+todays_date)
             api.update_status(status = (tweet))
             time.sleep(60)
 
@@ -73,7 +73,7 @@ while True:
         last_years_carbon_level = df.loc[(len(df)- 366), 1]
 
         for i in range(len(senators_batch_3)):
-            tweet = "coming soon!"
+            tweet = str("Hey "+senators_batch_1[i]+"! Did you know that today, the level of CO2 in the atmosphere is "+todays_carbon_level+" parts per million? One year ago, it was "+last_years_carbon_level+" parts per million. Super cool, amirite? And it's thanks to your inaction! Source: https://carbon.datahub.io/# "+todays_date)
             api.update_status(status = (tweet))
             time.sleep(60)
     # this function is the same as calculate_and_tweet_1,
@@ -83,7 +83,7 @@ while True:
         last_years_carbon_level = df.loc[(len(df)- 366), 1]
 
         for i in range(len(senators_batch_4)):
-            tweet = "coming soon!"
+            tweet = str("Hey "+senators_batch_1[i]+"! Here’s a fun reminder for you: today’s level of atmospheric CO2 is "+todays_carbon_level+" parts per million? A year ago, it was "+last_years_carbon_level+" parts per million. Wow, sure seems like something should be done about that! Source: https://carbon.datahub.io/# "+todays_date)
             api.update_status(status = (tweet))
             time.sleep(60)
     # this function pauses the program for 23 hours,
@@ -101,12 +101,12 @@ while True:
 
     # grabbing today's date
     todays_date = datetime.now()
-
+    print(todays_date)
     # checking the day and time, then tweeting appropriate senators (or taking a nop)
     if todays_date.weekday() == 5:   # if it's saturday
         calculate_and_tweet_1(df, senators_batch_1)
         go_to_sleep()
-    elif todays_date.weekday() == 6 and todays_date.hour == 9: # if it's sunday
+    elif todays_date.weekday() == 6: # if it's sunday
         calculate_and_tweet_2(df, senators_batch_2)
         go_to_sleep()
     elif todays_date.weekday() == 0: # if it's monday
