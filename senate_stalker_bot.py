@@ -64,6 +64,7 @@ while True:
         for i in range(len(senators_batch_2)):
             tweet = str("Hey "+senators_batch_1[i]+"! Here’s a fun reminder for you: today’s level of atmospheric CO2 is "+todays_carbon_level+" parts per million? A year ago, it was "+last_years_carbon_level+" parts per million. Wow, sure seems like something should be done about that! Oh, well. Have a superb week! Source: https://carbon.datahub.io/#")
             api.update_status(status = (tweet))
+            time.sleep(60)
 
     # this function is the same as calculate_and_tweet_1,
     # with a different batch of senators
@@ -74,7 +75,7 @@ while True:
         for i in range(len(senators_batch_3)):
             tweet = "coming soon!"
             api.update_status(status = (tweet))
-
+            time.sleep(60)
     # this function is the same as calculate_and_tweet_1,
     # with a different batch of senators
     def calculate_and_tweet_4(df, senators_batch_4):                         # today is tuesdayyy
@@ -84,7 +85,7 @@ while True:
         for i in range(len(senators_batch_4)):
             tweet = "coming soon!"
             api.update_status(status = (tweet))
-
+            time.sleep(60)
     # this function pauses the program for 23 hours,
     # and is used to better space out the time-checking
     def go_to_sleep():
