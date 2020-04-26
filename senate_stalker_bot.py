@@ -35,6 +35,7 @@ senators_batch_4 = senators[42:len(senators)-1]
 
 while True:
 
+    print("*rubs hands* get ready.")
     # grabbing the url of the data
     package = Package('https://datahub.io/core/co2-ppm-daily/datapackage.json')
 
