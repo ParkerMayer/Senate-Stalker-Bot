@@ -101,16 +101,16 @@ while True:
     todays_date = datetime.now()
 
     # checking the day and time, then tweeting appropriate senators (or taking a nop)
-    if todays_date.weekday() == 5 and todays_date.hour == 11:   # if it's saturday
+    if todays_date.weekday() == 5 and todays_date.hour == 10:   # if it's saturday
         calculate_and_tweet_1(df, todays_date, senators_batch_1)
         go_to_sleep()
-    elif todays_date.weekday() == 6 and todays_date.hour == 11: # if it's sunday
+    elif todays_date.weekday() == 6 and todays_date.hour == 10: # if it's sunday
         calculate_and_tweet_2(df, todays_date, senators_batch_2)
         go_to_sleep()
-    elif todays_date.weekday() == 0 and todays_date.hour == 11: # if it's monday
+    elif todays_date.weekday() == 0 and todays_date.hour == 10: # if it's monday
         calculate_and_tweet_3(df, todays_date, senators_batch_3)
         go_to_sleep()
-    elif todays_date.weekday() == 1 and todays_date.hour == 11: # if it's tuesdayyy
+    elif todays_date.weekday() == 1 and todays_date.hour == 10: # if it's tuesdayyy
         calculate_and_tweet_4(df, todays_date, senators_batch_4)
         go_to_sleep()
     elif todays_date == 2:
