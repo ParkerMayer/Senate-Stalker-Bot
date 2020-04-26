@@ -62,7 +62,7 @@ while True:
         last_years_carbon_level = df.loc[(len(df)- 366), 1]
 
         for i in range(len(senators_batch_2)):
-            tweet = str("Hey "+senators_batch_1[i]+"! Here’s a fun reminder for you: today’s level of atmospheric CO2 is "+todays_carbon_level+" parts per million! A year ago, it was "+last_years_carbon_level+" parts per million. Wow, sure seems like something should be done about that! Source: https://carbon.datahub.io/# "+str(todays_date))
+            tweet = str("Hey "+senators_batch_2[i]+"! Here’s a fun reminder for you: today’s level of atmospheric CO2 is "+todays_carbon_level+" parts per million! A year ago, it was "+last_years_carbon_level+" parts per million. Wow, sure seems like something should be done about that! Source: https://carbon.datahub.io/# "+str(todays_date))
             api.update_status(status = (tweet))
             time.sleep(60)
 
@@ -73,7 +73,7 @@ while True:
         last_years_carbon_level = df.loc[(len(df)- 366), 1]
 
         for i in range(len(senators_batch_3)):
-            tweet = str("Hey "+senators_batch_1[i]+"! Did you know that today, the level of CO2 in the atmosphere is "+todays_carbon_level+" parts per million? One year ago, it was "+last_years_carbon_level+" parts per million. Super cool, amirite? And it's thanks to your inaction! Source: https://carbon.datahub.io/# "+str(todays_date))
+            tweet = str("Hey "+senators_batch_3[i]+"! Did you know that today, the level of CO2 in the atmosphere is "+todays_carbon_level+" parts per million? One year ago, it was "+last_years_carbon_level+" parts per million. Super cool, amirite? And it's thanks to your inaction! Source: https://carbon.datahub.io/# "+str(todays_date))
             api.update_status(status = (tweet))
             time.sleep(60)
     # this function is the same as calculate_and_tweet_1,
@@ -83,7 +83,7 @@ while True:
         last_years_carbon_level = df.loc[(len(df)- 366), 1]
 
         for i in range(len(senators_batch_4)):
-            tweet = str("Hey "+senators_batch_1[i]+"! Here’s a fun reminder for you: today’s level of atmospheric CO2 is "+todays_carbon_level+" parts per million! A year ago, it was "+last_years_carbon_level+" parts per million. Wow, sure seems like something should be done about that! Source: https://carbon.datahub.io/# "+str(todays_date))
+            tweet = str("Hey "+senators_batch_4[i]+"! Here’s a fun reminder for you: today’s level of atmospheric CO2 is "+todays_carbon_level+" parts per million! A year ago, it was "+last_years_carbon_level+" parts per million. Wow, sure seems like something should be done about that! Source: https://carbon.datahub.io/# "+str(todays_date))
             api.update_status(status = (tweet))
             time.sleep(60)
     # this function pauses the program for 23 hours,
