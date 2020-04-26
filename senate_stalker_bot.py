@@ -121,3 +121,4 @@ while True:
     time.sleep(60)
 
 # NOTE: more efficient time management method coming sooooooon.
+#:D
